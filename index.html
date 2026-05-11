@@ -1,0 +1,132 @@
+<!DOCTYPE html><html lang="ar" dir="rtl"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>نظام إصدار الوثائق المؤقتة</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>جمهورية العراق - الهيئة العامة للكمارك</h1>
+            <h2>منصة المنتج المحلي - إصدار الوثيقة المؤقتة</h2>
+        </header>
+
+        <form id="documentForm">
+            <div class="form-section">
+                <h3>معلومات الوثيقة</h3>
+                <div class="form-group">
+                    <label for="docNumber">رقم الوثيقة:</label>
+                    <input type="text" id="docNumber" name="docNumber" required="">
+                </div>
+                <div class="form-group">
+                    <label for="docDate">تاريخ إنشاء الوثيقة:</label>
+                    <input type="date" id="docDate" name="docDate" required="">
+                </div>
+                <div class="form-group">
+                    <label for="docTime">التوقيت:</label>
+                    <input type="time" id="docTime" name="docTime" required="">
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h3>معلومات الشخصية</h3>
+                <div class="form-group">
+                    <label for="entryPoint">نقطة السيطرة:</label>
+                    <select id="entryPoint" name="entryPoint" required="">
+                        <option value="">الرجاء اختيار نقطة السيطرة</option>
+                        <option value="سيطرة دارمان">سيطرة دارمان</option>
+                        <option value="سيطرة جيمن">سيطرة جيمن</option>
+                        <option value="سيطرة السد">سيطرة السد</option>
+                        <option value="سيطرة باوه محمود">سيطرة باوه محمود</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="driverName">اسم السائق:</label>
+                    <input type="text" id="driverName" name="driverName" required="">
+                </div>
+                <div class="form-group">
+                    <label for="vehicleNumber">رقم العجلة:</label>
+                    <input type="text" id="vehicleNumber" name="vehicleNumber" required="">
+                </div>
+                <div class="form-group">
+                    <label for="vehicleProvince">محافظة المنشأ (تسجيل العجلة):</label>
+                    <select id="vehicleProvince" name="vehicleProvince" required="">
+                        <option value="">الرجاء اختيار محافظة المنشأ</option>
+                        <option value="بغداد">بغداد</option>
+                        <option value="نينوى">نينوى</option>
+                        <option value="البصرة">البصرة</option>
+                        <option value="ذي قار">ذي قار</option>
+                        <option value="الأنبار">الأنبار</option>
+                        <option value="النجف">النجف</option>
+                        <option value="كربلاء">كربلاء</option>
+                        <option value="بابل">بابل</option>
+                        <option value="ديالى">ديالى</option>
+                        <option value="ميسان">ميسان</option>
+                        <option value="واسط">واسط</option>
+                        <option value="صلاح الدين">صلاح الدين</option>
+                        <option value="أربيل">أربيل</option>
+                        <option value="دهوك">دهوك</option>
+                        <option value="السليمانية">السليمانية</option>
+                        <option value="كركوك">كركوك</option>
+                        <option value="المثنى">المثنى</option>
+                        <option value="القادسية">القادسية</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="weight">الوزن /الكمية:</label>
+                    <input type="text" id="weight" name="weight" required="">
+                </div>
+                <div class="form-group">
+                    <label for="destination">محافظة الوجهة النهائية:</label>
+                    <select id="destination" name="destination" required="">
+                        <option value="">الرجاء اختيار محافظة الوجهة</option>
+                        <option value="بغداد">بغداد</option>
+                        <option value="نينوى">نينوى</option>
+                        <option value="البصرة">البصرة</option>
+                        <option value="ذي قار">ذي قار</option>
+                        <option value="الأنبار">الأنبار</option>
+                        <option value="النجف">النجف</option>
+                        <option value="كربلاء">كربلاء</option>
+                        <option value="بابل">بابل</option>
+                        <option value="ديالى">ديالى</option>
+                        <option value="ميسان">ميسان</option>
+                        <option value="واسط">واسط</option>
+                        <option value="صلاح الدين">صلاح الدين</option>
+                        <option value="أربيل">أربيل</option>
+                        <option value="دهوك">دهوك</option>
+                        <option value="السليمانية">السليمانية</option>
+                        <option value="كركوك">كركوك</option>
+                        <option value="المثنى">المثنى</option>
+                        <option value="القادسية">القادسية</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="companyName">اسم الشركة:</label>
+                    <input type="text" id="companyName" name="companyName" required="">
+                </div>
+                <div class="form-group">
+                    <label for="cargoType">نوع /تفاصيل الحمولة:</label>
+                    <input type="text" id="cargoType" name="cargoType" required="">
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h3>رمز الاستجابة السريعة (QR Code)</h3>
+                <div class="form-group">
+                    <label for="qrFile">قم برفع صورة QR Code (مطلوب):</label>
+                    <input type="file" id="qrFile" name="qrFile" accept="image/*" required="">
+                </div>
+            </div>
+
+            <button type="submit" class="submit-btn">إنشاء الوثيقة PDF</button>
+        </form>
+
+        <div id="status" style="margin-top: 20px; padding: 15px; border-radius: 8px; display: none;">
+            <p id="statusMessage"></p>
+        </div>
+    </div>
+
+    <script src="script-word-public.js"></script>
+
+
+</body></html>
